@@ -1,4 +1,4 @@
-# 📡 Network Monitoring Stack (SNMP + Telegraf + InfluxDB + Grafana)
+# Network Monitoring Stack (SNMP + Telegraf + InfluxDB + Grafana)
 
 ![SNMP](https://img.shields.io/badge/protocol-SNMP-blue)
 ![Monitoring](https://img.shields.io/badge/category-Network%20Monitoring-green)
@@ -22,7 +22,7 @@ This project uses:
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project provides a scalable and reproducible monitoring stack designed to:
 
@@ -34,8 +34,8 @@ This project provides a scalable and reproducible monitoring stack designed to:
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 
-## 🏷️ Keywords
+## Keywords
 network monitoring, SNMP monitoring, infrastructure monitoring, observability, telemetry, time-series database, Grafana dashboards, InfluxDB, Telegraf, DevOps, NetOps, cybersecurity, homelab, network visibility, Docker monitoring stack
