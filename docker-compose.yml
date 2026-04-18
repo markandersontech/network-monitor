@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    env_file:
+      - .env
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb2
+    restart: unless-stopped
+
+  telegraf:
+    image: telegraf:1.30
+    container_name: telegraf
+    depends_on:
+      - influxdb
+    env_file:
+      - .env
+    volumes:
+      - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.4
+    container_name: grafana
+    depends_on:
+      - influxdb
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+      - ./config/grafana/provisioning:/etc/grafana/provisioning
+      - ./config/grafana/dashboards:/var/lib/grafana/dashboards
+    restart: unless-stopped
