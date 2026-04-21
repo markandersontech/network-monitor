@@ -11,6 +11,8 @@ services:
     volumes:
       - ./data/influxdb:/var/lib/influxdb2
     restart: unless-stopped
+    networks:
+      - monitoring
 
   telegraf:
     image: telegraf:1.30
@@ -22,6 +24,8 @@ services:
     volumes:
       - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     restart: unless-stopped
+    networks:
+      - monitoring
 
   grafana:
     image: grafana/grafana:10.4
@@ -37,3 +41,8 @@ services:
       - ./config/grafana/provisioning:/etc/grafana/provisioning
       - ./config/grafana/dashboards:/var/lib/grafana/dashboards
     restart: unless-stopped
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
