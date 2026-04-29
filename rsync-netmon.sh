@@ -7,4 +7,4 @@ fi
 #  echo "VENV must be active.  Exiting script."
 #  exit 1
 #fi
-rsync -rv --delete --exclude-from=.gitignore . pi@192.168.4.54:/home/pi/src/esp32-env-monitor/
+rsync -rv --delete --exclude-from=.gitignore . pi@192.168.4.54:/home/pi/src/network-monitor/
