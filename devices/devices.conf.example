@@ -1,0 +1,12 @@
+# ============================================================
+# Network Monitor Device Inventory
+# ============================================================
+#
+# name       address        type       location
+#
+# router01   10.80.22.1     router     lab
+# switch01   10.80.22.4     switch     lab
+# switch02   10.80.22.5     switch     lab
+# switch03   10.80.22.6     switch     lab
+# server01   10.80.22.11    server     lab
+#

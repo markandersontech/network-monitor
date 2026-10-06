@@ -36,6 +36,34 @@ This project provides a scalable and reproducible monitoring stack designed to:
 
 ## Architecture
 
+```text
+                        NETWORK DEVICES
+                              |
+                              | SNMP
+                              |
+                              v
+                        +-----------+
+                        | Telegraf  |
+                        +-----+-----+
+                              |
+                              | HTTP
+                              v
+                        +-----------+
+                        | InfluxDB  |
+                        |     3     |
+                        +-----+-----+
+                              |
+                              | SQL
+                              v
+                        +-----------+
+                        |  Grafana  |
+                        +-----------+
+```
 
 ## Keywords
 network monitoring, SNMP monitoring, infrastructure monitoring, observability, telemetry, time-series database, Grafana dashboards, InfluxDB, Telegraf, DevOps, NetOps, cybersecurity, homelab, network visibility, Docker monitoring stack
+
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
