@@ -16,7 +16,7 @@ datasources:
 
     jsonData:
       version: SQL
-      dbName: network_monitoring
+      dbName: network_monitor
       httpMode: POST
       insecureGrpc: true
 
